@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">SoFitApp</string>
+    <string name="app_name">SoFit App</string>
+    <string name="app_logo">Logo Aplikasi</string>
 </resources>
