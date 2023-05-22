@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.capstone.sofitapp.MainActivity
 import com.capstone.sofitapp.databinding.ActivitySplashScreenBinding
 
 class SplashScreen : AppCompatActivity() {
@@ -18,7 +17,7 @@ class SplashScreen : AppCompatActivity() {
         setContentView(binding.root)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, WelcomeActivity::class.java))
             finish()
         },duration)
     }

@@ -1,11 +1,12 @@
-package com.capstone.sofitapp
+package com.capstone.sofitapp.ui.result
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.capstone.sofitapp.R
 
-class MainActivity : AppCompatActivity() {
+class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_result)
     }
 }
