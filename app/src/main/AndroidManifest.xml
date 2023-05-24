@@ -15,6 +15,9 @@
         android:theme="@style/Theme.SoFitApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.quisioner.QuisionerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.WelcomeActivity"
             android:exported="false" />
         <activity
