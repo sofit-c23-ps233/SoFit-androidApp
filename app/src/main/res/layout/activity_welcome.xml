@@ -6,4 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".ui.WelcomeActivity">
 
+    <ImageView
+        android:id="@+id/ivWelcome"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="240dp"
+        android:contentDescription="@string/imageWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_sofit1" />
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/green"
+        android:textSize="36sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivWelcome"
+        app:layout_constraintStart_toEndOf="@+id/ivWelcome"
+        app:layout_constraintTop_toTopOf="@+id/ivWelcome" />
+
+    <TextView
+        android:id="@+id/tvTitle_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/descwelcome"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivWelcome" />
+
+    <Button
+        android:id="@+id/btnRegister_welcome"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="31dp"
+        android:backgroundTint="@color/light_green"
+        android:fontFamily="@font/poppins_bold"
+        android:shadowRadius="20"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle_welcome" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="281dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister_welcome" />
+
+    <TextView
+        android:id="@+id/tvdesc_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/intent_login"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/divider2"
+        app:layout_constraintStart_toEndOf="@+id/divider1"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister_welcome" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="31dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister_welcome" />
+
+    <com.capstone.sofitapp.ui.customview.LoginButton
+        android:id="@+id/btnLogin_welcome"
+        android:layout_width="350dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="31dp"
+        android:fontFamily="@font/poppins_bold"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdesc_welcome" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

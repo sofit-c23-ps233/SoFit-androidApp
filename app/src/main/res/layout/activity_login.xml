@@ -19,4 +19,115 @@
         app:layout_constraintVertical_bias="0.036"
         app:tint="@color/green" />
 
+    <ImageView
+        android:id="@+id/ivLogin"
+        android:layout_width="242dp"
+        android:layout_height="171dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="85dp"
+        android:contentDescription="@string/imagelogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_login" />
+
+    <TextView
+        android:id="@+id/tv_title_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/title_login"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.339"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogin" />
+
+    <com.capstone.sofitapp.ui.customview.EmailEdit
+        android:id="@+id/edit_email"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/bg_custom"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="@string/email"
+        android:importantForAutofill="no"
+        android:maxLength="26"
+        android:minHeight="48dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_login" />
+
+    <com.capstone.sofitapp.ui.customview.PasswordEdit
+        android:id="@+id/edit_password"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_custom"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:maxLength="26"
+        android:minHeight="48dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_email" />
+
+    <com.capstone.sofitapp.ui.customview.LoginButton
+        android:id="@+id/loginButton"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+
+    <TextView
+        android:id="@+id/tvRegis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/intent_regis"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tvRegis2"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+
+    <TextView
+        android:id="@+id/tvRegis2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/register"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
+        app:layout_constraintTop_toTopOf="@+id/tvRegis" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,21 +3,26 @@
     <string name="app_logo">Logo Aplikasi</string>
     <string name="team">C23-PS233</string>
 
-    <!--Pertanyaan-->
+    <!--Questions-->
 
-    <!--Login & Register-->
+    <!--Welcome, Login & Register-->
     <string name="login">Masuk</string>
     <string name="register">Buat Akun</string>
     <string name="back">Kembali</string>
     <string name="imageRegister">Gambar Register</string>
     <string name="username">Username</string>
-    <string name="user_hint">Name</string>
     <string name="email">Email</string>
     <string name="email_hint">contoh123@gmail.com</string>
     <string name="password">Password</string>
-    <string name="password_hint" translatable="false">Harus Berisi 8 Karakter</string>
+    <string name="password_hint" translatable="false">Minimal 8 Karakter</string>
     <string name="password_konfirmasi" translatable="false">Konfirmasi Password</string>
     <string name="password_konfirmasi_hint" translatable="false">Ketik Ulang Password</string>
     <string name="intent_login" translatable="false">Sudah Memiliki Akun?</string>
     <string name="title_register">Daftarkan akun anda dibawah ini</string>
+    <string name="imagelogin">Gambar Login</string>
+    <string name="title_login">Masuk dengan akun anda</string>
+    <string name="intent_regis">Belum Memiliki Akun?</string>
+    <string name="imageWelcome">Gambar Welcome</string>
+    <string name="descwelcome">Menuju BMI Yang Lebih Sehat Dimulai di Sini.</string> <!--Towards a Healthier BMI Starts Here.-->
+
 </resources>

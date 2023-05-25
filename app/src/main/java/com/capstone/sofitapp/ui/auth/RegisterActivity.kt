@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.capstone.sofitapp.databinding.ActivityRegisterBinding
+import com.capstone.sofitapp.ui.WelcomeActivity
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -16,6 +17,15 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         btnLogin()
+        btnBack()
+    }
+
+
+    private fun btnBack() {
+        binding.ivBack.setOnClickListener {
+            val intent = Intent(this@RegisterActivity, WelcomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun btnLogin() {
