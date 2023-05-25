@@ -24,7 +24,9 @@ class LoginActivity : AppCompatActivity() {
     private fun btnBack() {
         binding.ivBack.setOnClickListener {
             val intent = Intent(this@LoginActivity, WelcomeActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
+            finish()
         }
     }
 
@@ -32,6 +34,7 @@ class LoginActivity : AppCompatActivity() {
         binding.tvRegis2.setOnClickListener {
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
