@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">SoFit App</string>
     <string name="app_logo">Logo Aplikasi</string>
@@ -15,9 +16,4 @@
     <string name="email">Email</string>
     <string name="email_hint">contoh123@gmail.com</string>
     <string name="password">Password</string>
-    <string name="password_hint" translatable="false">Harus Berisi 8 Karakter</string>
-    <string name="password_konfirmasi" translatable="false">Konfirmasi Password</string>
-    <string name="password_konfirmasi_hint" translatable="false">Ketik Ulang Password</string>
-    <string name="intent_login" translatable="false">Sudah Memiliki Akun?</string>
-    <string name="title_register">Daftarkan akun anda dibawah ini</string>
 </resources>
