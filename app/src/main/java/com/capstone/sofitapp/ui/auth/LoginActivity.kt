@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.capstone.sofitapp.databinding.ActivityLoginBinding
+import com.capstone.sofitapp.ui.MainActivity
 import com.capstone.sofitapp.ui.WelcomeActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -23,6 +24,7 @@ class LoginActivity : AppCompatActivity() {
         playAnimation()
         btnBack()
         btnRegis()
+        btnLogin()
     }
 
     private fun playAnimation() {
@@ -63,6 +65,14 @@ class LoginActivity : AppCompatActivity() {
     private fun btnRegis() {
         binding.tvRegis2.setOnClickListener {
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
+
+    private fun btnLogin() {
+        binding.loginButton.setOnClickListener {
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
