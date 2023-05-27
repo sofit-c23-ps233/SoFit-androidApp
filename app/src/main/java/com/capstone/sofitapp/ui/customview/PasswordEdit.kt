@@ -28,7 +28,7 @@ class PasswordEdit: AppCompatEditText {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (s.toString().isNotEmpty() && s.toString().length < limit){
-                    error = "Must be more than 8 Character"
+                    error = "Minimal 8 Karakter"
                 }
             }
 

@@ -1,8 +1,11 @@
 package com.capstone.sofitapp.ui.auth
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.capstone.sofitapp.databinding.ActivityLoginBinding
 import com.capstone.sofitapp.ui.WelcomeActivity
 
@@ -17,8 +20,35 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        playAnimation()
         btnBack()
         btnRegis()
+    }
+
+    private fun playAnimation() {
+        ObjectAnimator.ofFloat(binding.ivLogin, View.TRANSLATION_X, -30f, 30f).apply {
+            duration = 6000
+            repeatCount = ObjectAnimator.INFINITE
+            repeatMode = ObjectAnimator.REVERSE
+        }.start()
+
+        val back = ObjectAnimator.ofFloat(binding.ivBack, View.ALPHA, 1f).setDuration(400)
+        val title1 = ObjectAnimator.ofFloat(binding.tvTitleLogin, View.ALPHA, 1f).setDuration(400)
+        val title2 = ObjectAnimator.ofFloat(binding.tvTitleLogin2, View.ALPHA, 1f).setDuration(400)
+        val email = ObjectAnimator.ofFloat(binding.editEmail, View.ALPHA, 1f).setDuration(500)
+        val password = ObjectAnimator.ofFloat(binding.editPassword, View.ALPHA, 1f).setDuration(500)
+        val login = ObjectAnimator.ofFloat(binding.loginButton, View.ALPHA, 1f).setDuration(500)
+        val register1 = ObjectAnimator.ofFloat(binding.tvRegis, View.ALPHA, 1f).setDuration(500)
+        val register2 = ObjectAnimator.ofFloat(binding.tvRegis2, View.ALPHA, 1f).setDuration(500)
+
+        val together = AnimatorSet().apply {
+            playTogether(email, password, login, register1, register2)
+        }
+
+        AnimatorSet().apply {
+            playSequentially(back, title1, title2,  together)
+            startDelay = 400
+        }.start()
     }
 
     private fun btnBack() {
