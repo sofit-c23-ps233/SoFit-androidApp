@@ -17,31 +17,31 @@
         <activity
             android:name=".ui.WelcomeActivity"
             android:exported="false"
-            android:theme="@style/Theme.SoFitApp.NoActionBar"/>
+            android:theme="@style/Theme.SoFitApp.NoActionBar" />
         <activity
             android:name=".ui.auth.RegisterActivity"
             android:exported="false"
-            android:theme="@style/Theme.SoFitApp.NoActionBar"/>
+            android:theme="@style/Theme.SoFitApp.NoActionBar" />
         <activity
             android:name=".ui.auth.LoginActivity"
             android:exported="false"
-            android:theme="@style/Theme.SoFitApp.NoActionBar"/>
+            android:theme="@style/Theme.SoFitApp.NoActionBar" />
         <activity
             android:name=".ui.quisioner.QuisionerActivity"
             android:exported="false"
-            android:theme="@style/Theme.SoFitApp.NoActionBar"/>
+            android:theme="@style/Theme.SoFitApp.NoActionBar" />
         <activity
             android:name=".ui.result.ResultActivity"
             android:exported="false"
-            android:theme="@style/Theme.SoFitApp.NoActionBar"/>
+            android:theme="@style/Theme.SoFitApp.NoActionBar" />
         <activity
             android:name=".ui.history.HistoryActivity"
             android:exported="false"
-            android:theme="@style/Theme.SoFitApp.NoActionBar"/>
+            android:theme="@style/Theme.SoFitApp.NoActionBar" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.SoFitApp.NoActionBar"/>
+            android:theme="@style/Theme.SoFitApp.NoActionBar" />
         <activity
             android:name=".ui.SplashScreen"
             android:exported="true"

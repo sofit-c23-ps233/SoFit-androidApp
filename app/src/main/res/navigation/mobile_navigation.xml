@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/home_activity">
+
+    <fragment
+        android:id="@+id/nav_test"
+        android:name="com.capstone.sofitapp.ui.quisioner.QuisionerActivity"
+        android:label="@string/menu_test"
+        tools:layout="@layout/activity_quisioner" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.capstone.sofitapp.ui.history.HistoryActivity"
+        android:label="@string/menu_history"
+        tools:layout="@layout/activity_history" />
+
+</navigation>

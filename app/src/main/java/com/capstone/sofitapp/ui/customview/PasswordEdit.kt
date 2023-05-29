@@ -34,7 +34,6 @@ class PasswordEdit: AppCompatEditText {
 
             override fun afterTextChanged(s: Editable?) {
             }
-
         })
     }
 }

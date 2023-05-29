@@ -73,13 +73,13 @@
         android:alpha="0"
         android:background="@drawable/bg_custom"
         android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="12dp"
+        android:drawablePadding="17dp"
         android:fontFamily="@font/poppins_regular"
         android:hint="@string/email"
         android:importantForAutofill="no"
         android:maxLength="26"
         android:minHeight="48dp"
-        android:paddingStart="8dp"
+        android:paddingStart="12dp"
         android:paddingEnd="8dp"
         android:textColor="@color/black"
         android:textColorHint="@color/grey"
@@ -88,30 +88,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title_login2" />
 
-    <com.capstone.sofitapp.ui.customview.PasswordEdit
-        android:id="@+id/edit_password"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
         android:layout_marginTop="32dp"
         android:alpha="0"
-        android:background="@drawable/bg_custom"
-        android:drawableStart="@drawable/ic_password"
-        android:drawablePadding="12dp"
-        android:ems="10"
-        android:fontFamily="@font/poppins_regular"
-        android:hint="@string/password"
-        android:importantForAutofill="no"
-        android:maxLength="26"
-        android:minHeight="48dp"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        android:textSize="16sp"
+        app:boxStrokeColor="@color/light_green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_email" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_email"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_password"
+        app:startIconTint="@color/light_green">
+
+        <com.capstone.sofitapp.ui.customview.PasswordEdit
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.capstone.sofitapp.ui.customview.LoginButton
         android:id="@+id/loginButton"
@@ -124,7 +127,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+        app:layout_constraintTop_toBottomOf="@+id/tl_password" />
 
     <TextView
         android:id="@+id/tvRegis"

@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
         val title1 = ObjectAnimator.ofFloat(binding.tvTitleLogin, View.ALPHA, 1f).setDuration(400)
         val title2 = ObjectAnimator.ofFloat(binding.tvTitleLogin2, View.ALPHA, 1f).setDuration(400)
         val email = ObjectAnimator.ofFloat(binding.editEmail, View.ALPHA, 1f).setDuration(500)
-        val password = ObjectAnimator.ofFloat(binding.editPassword, View.ALPHA, 1f).setDuration(500)
+        val password = ObjectAnimator.ofFloat(binding.tlPassword, View.ALPHA, 1f).setDuration(500)
         val login = ObjectAnimator.ofFloat(binding.loginButton, View.ALPHA, 1f).setDuration(500)
         val register1 = ObjectAnimator.ofFloat(binding.tvRegis, View.ALPHA, 1f).setDuration(500)
         val register2 = ObjectAnimator.ofFloat(binding.tvRegis2, View.ALPHA, 1f).setDuration(500)
@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         AnimatorSet().apply {
-            playSequentially(back, title1, title2,  together)
+            playSequentially(back, title1, title2, together)
             startDelay = 400
         }.start()
     }
