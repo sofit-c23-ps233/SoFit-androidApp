@@ -49,4 +49,11 @@
     <string name="menu_history">Riwayat</string>
     <string name="logout">Keluar</string>
 
+    <!--History-->
+    <string name="title_result">Hasil</string>
+    <string name="date">Tanggal</string>
+    <string name="time">Waktu</string>
+    <string name="hasil_bmi">BMI</string>
+    <string name="delete">Hapus</string>
+
 </resources>
