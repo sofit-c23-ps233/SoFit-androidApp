@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.capstone.sofitapp.R
 import com.capstone.sofitapp.databinding.ActivityMainBinding
 import com.capstone.sofitapp.ui.history.HistoryActivity
+import com.capstone.sofitapp.ui.profile.ProfileActivity
 import com.capstone.sofitapp.ui.quisioner.QuisionerActivity
 import com.google.android.material.navigation.NavigationView
 
@@ -39,8 +40,17 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, HistoryActivity::class.java)
                     startActivity(intent)
                 }
+                R.id.nav_profile -> {
+                    val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
+                }
             }
             true
+        }
+
+        binding.homeActivity.btnEdit.setOnClickListener {
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
         }
 
         binding.homeActivity.cvTest.setOnClickListener {

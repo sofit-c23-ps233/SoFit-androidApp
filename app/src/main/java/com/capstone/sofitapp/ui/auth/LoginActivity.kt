@@ -55,7 +55,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun btnBack() {
         binding.ivBack.setOnClickListener {
-            val intent = Intent(this@LoginActivity, WelcomeActivity::class.java)
+            val intent = Intent(this, WelcomeActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
             finish()
@@ -64,7 +64,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun btnRegis() {
         binding.tvRegis2.setOnClickListener {
-            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -72,7 +72,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun btnLogin() {
         binding.loginButton.setOnClickListener {
-            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
