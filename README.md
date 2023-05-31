@@ -3,4 +3,4 @@
 
 
 # About 
-SoFit: Application for the health of your body and provide recommendations based on your BMI.
+SoFit : Application for the health of your body and provide recommendations based on your BMI.
