@@ -3,11 +3,11 @@ package com.capstone.sofitapp.ui.quisioner
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.capstone.sofitapp.ui.quisioner.Quisioner1Fragment
+import android.view.View
 import androidx.fragment.app.*
 import com.capstone.sofitapp.R
 import com.capstone.sofitapp.databinding.ActivityQuisionerBinding
+import com.capstone.sofitapp.ui.MainActivity
 import com.capstone.sofitapp.ui.result.ResultActivity
 
 class QuisionerActivity : AppCompatActivity() {
@@ -21,44 +21,63 @@ class QuisionerActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         if(savedInstanceState == null) {
-            supportFragmentManager.commitNow {
+            supportFragmentManager.commit {
                 setReorderingAllowed(true)
                 add<Quisioner1Fragment>(R.id.fragmentContainer)
             }
         }
 
-        binding.ivBack.setOnClickListener {
-            val prevFragment = Quisioner1Fragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, prevFragment)
-                .commit()
-        }
-
         binding.btnNext.btnKembali.setOnClickListener {
-            val prevFragment = Quisioner1Fragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, prevFragment)
-                .commit()
+            val prevFragment = when (supportFragmentManager.findFragmentById(R.id.fragmentContainer)) {
+                is Quisioner2Fragment -> Quisioner1Fragment()
+                is Quisioner3Fragment -> Quisioner2Fragment()
+                else -> null // Fragment pertama, tidak ada Fragment sebelumnya
+            }
+
+            prevFragment?.let {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainer, it)
+                    .commit()
+                binding.btnNext.btnLanjut.visibility = View.VISIBLE
+                binding.btnNext.btnHasil.visibility = View.GONE
+                binding.btnNext.btnKembali.isEnabled = true
+            }
         }
 
         binding.btnNext.btnLanjut.setOnClickListener {
-            val nextFragment = Quisioner2Fragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, nextFragment)
-                .commit()
+            val nextFragment = when (supportFragmentManager.findFragmentById(R.id.fragmentContainer)) {
+                is Quisioner1Fragment -> Quisioner2Fragment()
+                is Quisioner2Fragment -> Quisioner3Fragment()
+                else -> null // Fragment terakhir, tidak ada Fragment selanjutnya
+            }
+
+            nextFragment?.let {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainer, it)
+                    .commit()
+                binding.btnNext.btnLanjut.visibility = View.VISIBLE
+                binding.btnNext.btnHasil.visibility = View.GONE
+                binding.btnNext.btnKembali.isEnabled = true
+
+                if (it is Quisioner3Fragment) {
+                    binding.btnNext.btnLanjut.visibility = View.GONE
+                    binding.btnNext.btnHasil.visibility = View.VISIBLE
+                }
+            }
         }
 
-        binding.btnNext.btnLanjut.setOnClickListener {
-            val prevFragment = Quisioner3Fragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, prevFragment)
-                .commit()
-        }
-
-        binding.btnNext.btnLanjut.setOnClickListener {
+        binding.btnNext.btnHasil.setOnClickListener {
             val intent = Intent(this, ResultActivity::class.java)
             startActivity(intent)
             finish()
         }
+
+        binding.ivBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            finish()
+        }
     }
+
 }

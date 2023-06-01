@@ -17,10 +17,20 @@ class ResultActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         btnBack()
+        btnSave()
     }
 
     private fun btnBack() {
         binding.ivBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            finish()
+        }
+    }
+
+    private fun btnSave() {
+        binding.btnSimpan.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)

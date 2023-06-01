@@ -41,7 +41,7 @@
         android:fontFamily="@font/poppins_regular"
         android:text="@string/title_questions3"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/btnHasil"
+        app:layout_constraintEnd_toEndOf="@+id/tv_kg"
         app:layout_constraintTop_toBottomOf="@+id/ivTinggi" />
 
     <TextView
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvQuestions_gender" />
 
     <TextView
-        android:id="@+id/tv_cm"
+        android:id="@+id/tv_kg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -83,19 +83,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/edit_tinggi"
         app:layout_constraintStart_toEndOf="@+id/edit_tinggi"
         app:layout_constraintTop_toTopOf="@+id/edit_tinggi" />
-
-    <Button
-        android:id="@+id/btnHasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/title_result"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_tinggi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

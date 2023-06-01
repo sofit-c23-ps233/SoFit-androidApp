@@ -67,14 +67,13 @@
 
     <View
         android:id="@+id/divider1"
-        android:layout_width="100dp"
+        android:layout_width="85dp"
         android:layout_height="1dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="281dp"
         android:alpha="0"
         android:background="?android:attr/listDivider"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvdesc_welcome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister_welcome" />
 
@@ -96,15 +95,14 @@
 
     <View
         android:id="@+id/divider2"
-        android:layout_width="100dp"
+        android:layout_width="85dp"
         android:layout_height="1dp"
-        android:layout_marginStart="280dp"
         android:layout_marginTop="13dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginEnd="45dp"
         android:alpha="0"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvdesc_welcome"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister_welcome" />
 
     <com.capstone.sofitapp.ui.customview.LoginButton

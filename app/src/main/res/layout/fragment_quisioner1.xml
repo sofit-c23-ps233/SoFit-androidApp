@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".ui.quisioner.Quisioner1Fragment">
 
     <TextView
@@ -38,10 +38,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
         android:fontFamily="@font/poppins_regular"
         android:text="@string/title_questions1"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="@+id/rgGender"
         app:layout_constraintTop_toBottomOf="@+id/ivTinggi" />
 
     <TextView
@@ -58,43 +59,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvQuestions" />
 
-    <RadioButton
-        android:id="@+id/rbMen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/men"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuestions_gender" />
-
-    <RadioButton
-        android:id="@+id/rbWomen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/women"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbMen" />
-
-    <Button
-        android:id="@+id/btnNext"
+    <RadioGroup
+        android:id="@+id/rgGender"
         style="@style/Margin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/next"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/rbWomen"
-        app:layout_constraintTop_toBottomOf="@+id/rbWomen" />
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestions_gender">
+
+        <RadioButton
+            android:id="@+id/rbMen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/men" />
+
+        <RadioButton
+            android:id="@+id/rbWomen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/women" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

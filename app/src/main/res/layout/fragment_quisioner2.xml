@@ -41,7 +41,7 @@
         android:fontFamily="@font/poppins_regular"
         android:text="@string/title_questions2"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="@+id/tv_cm"
         app:layout_constraintTop_toBottomOf="@+id/ivTinggi" />
 
     <TextView
@@ -83,19 +83,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/edit_tinggi"
         app:layout_constraintStart_toEndOf="@+id/edit_tinggi"
         app:layout_constraintTop_toTopOf="@+id/edit_tinggi" />
-
-    <Button
-        android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/next"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_tinggi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

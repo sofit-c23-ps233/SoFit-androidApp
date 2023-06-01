@@ -10,6 +10,7 @@ import com.capstone.sofitapp.R
 import com.capstone.sofitapp.databinding.ActivityMainBinding
 import com.capstone.sofitapp.ui.history.HistoryActivity
 import com.capstone.sofitapp.ui.profile.ProfileActivity
+//import com.capstone.sofitapp.ui.quisioner.QuisionerActivity
 import com.capstone.sofitapp.ui.quisioner.QuisionerActivity
 import com.google.android.material.navigation.NavigationView
 

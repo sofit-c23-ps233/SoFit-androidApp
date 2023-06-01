@@ -73,7 +73,7 @@
     <string name="question3">Berapa berat badan anda?</string>
     <string name="men">Pria</string>
     <string name="women">Wanita</string>
-    <string name="next">Next</string>
+    <string name="next">Lanjut</string>
     <string name="tinggi_hint">Masukan tinggi anda disini</string>
     <string name="berat_hint">Masukan berat anda disini</string>
     <string name="cm">cm</string>
@@ -85,6 +85,13 @@
     <string name="rekomendasi_makanan">Makan Buah - Buahan</string>
     <string name="deskripsi_olahraga">Olahraga ini dapat membantu mengurangi lemak di tubuh, dan mampu membuat  badan sehat.</string>
     <string name="deskripsi_makanan">Memakan buah-buahan mampu meningkatkan kesehatan tubuh, merupakan sumber vitamin, dan Mencegah penyakit tertentu</string>
-
+    <string name="red">Merah</string>
+    <string name="orange">Orange</string>
+    <string name="yellow">Kuning</string>
+    <string name="dark_green">Hijau Tua</string>
+    <string name="light_green">Hijau Muda</string>
+    <string name="arrow">Panah</string>
+    <string name="hasil_bmi_angka">BMI anda 20,5</string>
+    <string name="hasil_bmi_keterangan">BMI anda bagus, pertahankan</string>
 
 </resources>
