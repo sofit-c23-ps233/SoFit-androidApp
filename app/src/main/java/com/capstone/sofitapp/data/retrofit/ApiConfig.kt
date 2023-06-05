@@ -8,6 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiConfig {
     companion object{
+        private const val BASEURL = "https://sofit-cloud.et.r.appspot.com/"
+
         fun getApiService(): ApiService {
             val loggingInterceptor = if(BuildConfig.DEBUG) {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -18,7 +20,7 @@ class ApiConfig {
                 .addInterceptor(loggingInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("api url")
+                .baseUrl(BASEURL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

@@ -4,8 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.capstone.sofitapp.databinding.ActivityProfileBinding
-import com.capstone.sofitapp.ui.MainActivity
-import com.capstone.sofitapp.ui.WelcomeActivity
+import com.capstone.sofitapp.ui.main.MainActivity
 
 class ProfileActivity : AppCompatActivity() {
 

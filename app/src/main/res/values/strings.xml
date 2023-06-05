@@ -23,6 +23,14 @@
     <string name="intent_regis">Belum Memiliki Akun?</string>
     <string name="imageWelcome">Gambar Welcome</string>
     <string name="descwelcome">Menuju BMI Yang Lebih Sehat Dimulai di Sini.</string> <!--Towards a Healthier BMI Starts Here.-->
+    <string name="akun_not_register">Maaf akun anda belum terdaftar</string>
+    <string name="password_not_match">Password anda tidak sama</string>
+    <string name="register_failed">Email sudah terdaftar. Registrasi gagal</string>
+    <string name="register_success">Registrasi berhasil</string>
+    <string name="required_field_username">Masukan username anda</string>
+    <string name="required_field_email">Masukan email anda dengan benar</string>
+    <string name="required_field_password">Masukan password anda minimal 8 karakter</string>
+    <string name="required_field_password_minimal">Password anda kurang dari 8 karakter</string>
 
     <!--Home-->
     <string name="hello">Halo,</string>

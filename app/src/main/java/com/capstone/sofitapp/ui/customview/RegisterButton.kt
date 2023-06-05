@@ -1,6 +1,7 @@
 package com.capstone.sofitapp.ui.customview
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
@@ -11,7 +12,8 @@ import com.capstone.sofitapp.R
 
 class RegisterButton: AppCompatButton {
     private lateinit var enabledBackground: Drawable
-    private var txtColor: Int = 0
+    private lateinit var disabledBackground: Drawable
+    private lateinit var txtColor: ColorStateList
 
     constructor(context: Context) : super(context) {
         init()
@@ -27,17 +29,23 @@ class RegisterButton: AppCompatButton {
     }
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        background = enabledBackground
 
-        setTextColor(txtColor)
+        if (isEnabled) {
+            background = enabledBackground
+            setTextColor(txtColor)
+        } else {
+            background = disabledBackground
+        }
+
         textSize = 16f
         gravity = Gravity.CENTER
         text = context.getString(R.string.register)
     }
 
     private fun init() {
-        txtColor = ContextCompat.getColor(context, android.R.color.background_light)
+        txtColor = ColorStateList.valueOf(ContextCompat.getColor(context, android.R.color.background_light))
         enabledBackground = ContextCompat.getDrawable(context, R.drawable.btn_custom) as Drawable
-
+        disabledBackground = ContextCompat.getDrawable(context, R.drawable.btn_custom_disable) as Drawable
     }
+
 }

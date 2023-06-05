@@ -43,7 +43,7 @@
             android:exported="false"
             android:theme="@style/Theme.SoFitApp.NoActionBar" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="false"
             android:theme="@style/Theme.SoFitApp.NoActionBar" />
         <activity

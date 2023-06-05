@@ -1,5 +1,7 @@
 package com.capstone.sofitapp.data.model
 
-class User {
-
-}
+data class User (
+    val name: String,
+    val token: String,
+    val isLogin: Boolean
+)

@@ -7,7 +7,7 @@ import android.view.View
 import androidx.fragment.app.*
 import com.capstone.sofitapp.R
 import com.capstone.sofitapp.databinding.ActivityQuisionerBinding
-import com.capstone.sofitapp.ui.MainActivity
+import com.capstone.sofitapp.ui.main.MainActivity
 import com.capstone.sofitapp.ui.result.ResultActivity
 
 class QuisionerActivity : AppCompatActivity() {
