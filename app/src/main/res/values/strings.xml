@@ -99,7 +99,13 @@
     <string name="dark_green">Hijau Tua</string>
     <string name="light_green">Hijau Muda</string>
     <string name="arrow">Panah</string>
-    <string name="hasil_bmi_angka">BMI anda 20,5</string>
-    <string name="hasil_bmi_keterangan">BMI anda bagus, pertahankan</string>
+    <string name="hasil_bmi_angka">BMI anda Ideal</string>
+    <string name="hasil_bmi_keterangan">BMI anda Ideal, pertahankan</string>
+    <string name="extremely_weak">Berat badan anda sangat kurus</string>
+    <string name="weak">Berat badan anda kurus</string>
+    <string name="ideal">Berat badan anda ideal</string>
+    <string name="overweight">Berat badan anda berlebih</string>
+    <string name="obesity">Berat badan anda lumayan berlebih</string>
+    <string name="extreme_obesity">Berat badan anda sangat berlebih</string>
 
 </resources>

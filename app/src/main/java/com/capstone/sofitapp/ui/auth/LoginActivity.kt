@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -134,13 +135,17 @@ class LoginActivity : AppCompatActivity() {
                     true
                 )
             )
+            loginViewModel.saveId(response.data?.id.toString())
         }
     }
 
     private fun moveActivity() {
         loginViewModel.loginResponse.observe(this@LoginActivity) { response ->
-            if (!response.error) {
-                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+            Log.d ("LoginActivity", "response: $response")
+            if (response.success) {
+                val intent = Intent(this, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
                 finish()
             }
         }

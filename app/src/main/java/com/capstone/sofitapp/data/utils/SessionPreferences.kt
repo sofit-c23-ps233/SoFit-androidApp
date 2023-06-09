@@ -29,6 +29,18 @@ class SessionPreferences private constructor(private val dataStore: DataStore<Pr
         }
     }
 
+    suspend fun saveId(id: String) {
+        dataStore.edit { preferences ->
+            preferences[ID_KEY] = id
+        }
+    }
+
+    fun getId(): Flow<String> {
+        return dataStore.data.map { preferences ->
+            preferences[ID_KEY] ?: ""
+        }
+    }
+
     suspend fun login() {
         dataStore.edit { preferences ->
             preferences[STATE_KEY] = true
@@ -44,6 +56,7 @@ class SessionPreferences private constructor(private val dataStore: DataStore<Pr
     companion object {
         @Volatile
         private var INSTANCE: SessionPreferences? = null
+        private val ID_KEY = stringPreferencesKey("id")
         private val NAME_KEY = stringPreferencesKey("name")
         private val TOKEN_KEY = stringPreferencesKey("token")
         private val STATE_KEY = booleanPreferencesKey("state")

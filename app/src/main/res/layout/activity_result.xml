@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/resultLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.result.ResultActivity">
@@ -85,23 +86,12 @@
                 android:id="@+id/ivMerah"
                 android:layout_width="33dp"
                 android:layout_height="46dp"
-                android:layout_marginStart="54dp"
+                android:layout_marginStart="44dp"
                 android:contentDescription="@string/red"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter1" />
-
-            <ImageView
-                android:id="@+id/ivOrange"
-                android:layout_width="33dp"
-                android:layout_height="46dp"
-                android:layout_marginTop="19dp"
-                android:contentDescription="@string/orange"
-                app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
-                app:layout_constraintStart_toEndOf="@+id/ivMerah"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter2" />
+                app:srcCompat="@drawable/parameter_merah1" />
 
             <ImageView
                 android:id="@+id/ivKuning"
@@ -109,53 +99,77 @@
                 android:layout_height="46dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
-                android:contentDescription="@string/yellow"
+                android:contentDescription="@string/orange"
                 app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
-                app:layout_constraintStart_toEndOf="@+id/ivOrange"
+                app:layout_constraintStart_toEndOf="@+id/ivMerah"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter3" />
+                app:srcCompat="@drawable/parameter_kuning" />
 
             <ImageView
-                android:id="@+id/ivHijau_tua"
+                android:id="@+id/ivHijau"
+                android:layout_width="33dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/yellow"
+                app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
+                app:layout_constraintStart_toEndOf="@+id/ivKuning"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/parameter_hijau" />
+
+            <ImageView
+                android:id="@+id/ivKuning2"
                 android:layout_width="33dp"
                 android:layout_height="46dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
                 android:contentDescription="@string/dark_green"
                 app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
-                app:layout_constraintStart_toEndOf="@+id/ivKuning"
+                app:layout_constraintStart_toEndOf="@+id/ivHijau"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter4" />
+                app:srcCompat="@drawable/parameter_kuning" />
 
             <ImageView
-                android:id="@+id/ivHijau_muda"
+                android:id="@+id/ivOrange"
                 android:layout_width="33dp"
                 android:layout_height="46dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
                 android:contentDescription="@string/light_green"
                 app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
-                app:layout_constraintStart_toEndOf="@+id/ivHijau_tua"
+                app:layout_constraintStart_toEndOf="@+id/ivKuning2"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter5" />
+                app:srcCompat="@drawable/parameter_orange" />
+
+            <ImageView
+                android:id="@+id/ivMerah2"
+                android:layout_width="33dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/light_green"
+                app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
+                app:layout_constraintStart_toEndOf="@+id/ivOrange"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/parameter_merah2" />
 
             <ImageView
                 android:id="@+id/ivArrow"
                 android:layout_width="30dp"
                 android:layout_height="17dp"
-                android:layout_marginStart="66dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
                 android:contentDescription="@string/arrow"
-                app:layout_constraintEnd_toEndOf="@+id/ivHijau_muda"
-                app:layout_constraintStart_toStartOf="@+id/ivMerah"
-                app:layout_constraintTop_toTopOf="@+id/tvHasil_angka"
+                app:layout_constraintEnd_toEndOf="@+id/ivHijau"
+                app:layout_constraintStart_toStartOf="@+id/ivHijau"
+                app:layout_constraintTop_toTopOf="@+id/ivHijau"
+                app:layout_constraintBottom_toBottomOf="@id/ivHijau"
                 app:srcCompat="@drawable/panah" />
 
             <TextView
                 android:id="@+id/tvHasil_keterangan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="118dp"
+                android:layout_marginStart="120dp"
                 android:layout_marginTop="52dp"
                 android:layout_marginEnd="118dp"
                 android:layout_marginBottom="8dp"

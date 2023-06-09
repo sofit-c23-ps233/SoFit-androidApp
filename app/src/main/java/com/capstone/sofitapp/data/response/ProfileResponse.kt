@@ -26,9 +26,6 @@ data class UpdateProfile(
     @field:SerializedName("message")
     val message: String,
 
-    @field:SerializedName("id_user")
-    val idUser: String,
-
     @field:SerializedName("username")
     val username: String,
 

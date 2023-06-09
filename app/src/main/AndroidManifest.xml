@@ -49,6 +49,7 @@
         <activity
             android:name=".ui.SplashScreen"
             android:exported="true"
+            android:noHistory="true"
             android:theme="@style/Theme.SoFitApp.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

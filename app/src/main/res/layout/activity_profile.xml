@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ivProfile" />
 
     <EditText
-        android:id="@+id/edit_user"
+        android:id="@+id/editUser"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -106,10 +106,10 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_user" />
+        app:layout_constraintTop_toBottomOf="@+id/editUser" />
 
     <com.capstone.sofitapp.ui.customview.EmailEdit
-        android:id="@+id/etEmail"
+        android:id="@+id/editEmail"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -142,6 +142,6 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

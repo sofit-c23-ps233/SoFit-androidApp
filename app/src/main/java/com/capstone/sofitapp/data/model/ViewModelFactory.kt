@@ -7,6 +7,8 @@ import com.capstone.sofitapp.data.utils.Injection
 import com.capstone.sofitapp.ui.auth.LoginViewModel
 import com.capstone.sofitapp.ui.auth.RegisterViewModel
 import com.capstone.sofitapp.ui.main.MainViewModel
+import com.capstone.sofitapp.ui.profile.ProfileViewModel
+import com.capstone.sofitapp.ui.result.ResultViewModel
 
 class ViewModelFactory(private val repo: UserPreference) : ViewModelProvider.NewInstanceFactory() {
 
@@ -21,6 +23,12 @@ class ViewModelFactory(private val repo: UserPreference) : ViewModelProvider.New
             }
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
                 LoginViewModel(repo) as T
+            }
+            modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
+                ProfileViewModel(repo) as T
+            }
+            modelClass.isAssignableFrom(ResultViewModel::class.java) -> {
+                ResultViewModel(repo) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

@@ -3,7 +3,9 @@ package com.capstone.sofitapp.ui.quisioner
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.activity.viewModels
 import androidx.fragment.app.*
 import com.capstone.sofitapp.R
 import com.capstone.sofitapp.databinding.ActivityQuisionerBinding
@@ -13,6 +15,7 @@ import com.capstone.sofitapp.ui.result.ResultActivity
 class QuisionerActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuisionerBinding
+    private val viewModel : QuisionerViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,11 +48,15 @@ class QuisionerActivity : AppCompatActivity() {
         }
 
         binding.btnNext.btnLanjut.setOnClickListener {
-            val nextFragment = when (supportFragmentManager.findFragmentById(R.id.fragmentContainer)) {
-                is Quisioner1Fragment -> Quisioner2Fragment()
-                is Quisioner2Fragment -> Quisioner3Fragment()
-                else -> null // Fragment terakhir, tidak ada Fragment selanjutnya
-            }
+            Log.d("Quisioner", viewModel.gender)
+            Log.d("Quisioner", viewModel.height)
+            Log.d("Quisioner", viewModel.weight)
+            val nextFragment =
+                when (supportFragmentManager.findFragmentById(R.id.fragmentContainer)) {
+                    is Quisioner1Fragment -> Quisioner2Fragment()
+                    is Quisioner2Fragment -> Quisioner3Fragment()
+                    else -> null // Fragment terakhir, tidak ada Fragment selanjutnya
+                }
 
             nextFragment?.let {
                 supportFragmentManager.beginTransaction()
@@ -67,7 +74,14 @@ class QuisionerActivity : AppCompatActivity() {
         }
 
         binding.btnNext.btnHasil.setOnClickListener {
+            Log.d("Quisioner", viewModel.gender)
+            Log.d("Quisioner", viewModel.height)
+            Log.d("Quisioner", viewModel.weight)
             val intent = Intent(this, ResultActivity::class.java)
+            //send gender, height, weight to ResultActivity
+            intent.putExtra("gender", viewModel.gender)
+            intent.putExtra("height", viewModel.height)
+            intent.putExtra("weight", viewModel.weight)
             startActivity(intent)
             finish()
         }
@@ -78,6 +92,12 @@ class QuisionerActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+
+    @Suppress("DEPRECATION")
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 
 }

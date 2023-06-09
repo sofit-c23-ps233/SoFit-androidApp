@@ -31,4 +31,10 @@ class LoginViewModel(private val repo: UserPreference) : ViewModel() {
             repo.login()
         }
     }
+
+    fun saveId(id: String) {
+        viewModelScope.launch {
+            repo.saveId(id)
+        }
+    }
 }

@@ -27,4 +27,11 @@ class HistoryActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    @Suppress("DEPRECATION")
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
+    }
+
 }

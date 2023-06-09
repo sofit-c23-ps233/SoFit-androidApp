@@ -132,4 +132,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        val backIntent = Intent(Intent.ACTION_MAIN)
+        backIntent.addCategory(Intent.CATEGORY_HOME)
+        backIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(backIntent)
+    }
+
 }

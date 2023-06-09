@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvQuestions" />
 
     <EditText
-        android:id="@+id/edit_tinggi"
+        android:id="@+id/edit_berat"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_marginStart="42dp"
@@ -80,8 +80,8 @@
         android:text="@string/kg"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/edit_tinggi"
-        app:layout_constraintStart_toEndOf="@+id/edit_tinggi"
-        app:layout_constraintTop_toTopOf="@+id/edit_tinggi" />
+        app:layout_constraintBottom_toBottomOf="@+id/edit_berat"
+        app:layout_constraintStart_toEndOf="@+id/edit_berat"
+        app:layout_constraintTop_toTopOf="@+id/edit_berat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

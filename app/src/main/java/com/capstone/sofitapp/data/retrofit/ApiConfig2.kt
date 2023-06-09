@@ -6,12 +6,12 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiConfig {
+class ApiConfig2 {
 
     companion object{
-        private const val BASEURL = "https://sofit-cloud.et.r.appspot.com/"
+        private const val BASEURL = "https://model-dot-sofit-cloud.et.r.appspot.com/"
 
-        fun getApiService(): ApiService {
+        fun getApiService(): ApiService2 {
             val loggingInterceptor = if(BuildConfig.DEBUG) {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
             } else {
@@ -25,7 +25,7 @@ class ApiConfig {
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
-            return retrofit.create(ApiService::class.java)
+            return retrofit.create(ApiService2::class.java)
         }
     }
 }
