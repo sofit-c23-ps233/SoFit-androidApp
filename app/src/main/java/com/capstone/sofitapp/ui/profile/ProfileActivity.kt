@@ -35,6 +35,8 @@ class ProfileActivity : AppCompatActivity() {
                 if (it.success) {
                     Toast.makeText(applicationContext, "Profile berhasil diupdate", Toast.LENGTH_SHORT).show() // ini ada titik komanya setelah kurung show
                     finish()
+                } else {
+                    Toast.makeText(applicationContext, "Gagal mengupdate profil", Toast.LENGTH_SHORT).show()
                 }
             }
         }

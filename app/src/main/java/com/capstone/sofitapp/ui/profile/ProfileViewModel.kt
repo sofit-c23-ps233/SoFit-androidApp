@@ -21,7 +21,7 @@ class ProfileViewModel(private val repo: UserPreference) : ViewModel(){
 
     fun doUpdate(email: String, username: String) {
         viewModelScope.launch {
-            repo.postProfile("r37DriWm", email, username) //yg hardcore ini coba pake userId
+            repo.postProfile(userId, email, username) //yg hardcore ini coba pake userId
         }
     }
 }

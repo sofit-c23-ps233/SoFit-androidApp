@@ -1,21 +1,18 @@
 package com.capstone.sofitapp.ui.quisioner
 
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
 import androidx.fragment.app.activityViewModels
-
 import com.capstone.sofitapp.databinding.FragmentQuisioner1Binding
 
 class Quisioner1Fragment : Fragment() {
 
     private var _binding: FragmentQuisioner1Binding? = null
     private val binding get() = _binding!!
-    val viewModel : QuisionerViewModel by activityViewModels()
+    private val viewModel : QuisionerViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

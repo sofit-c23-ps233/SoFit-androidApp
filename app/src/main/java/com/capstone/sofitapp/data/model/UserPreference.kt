@@ -14,7 +14,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 class UserPreference private constructor(
     private val apiService: ApiService,
     private val apiService2: ApiService2,
@@ -40,7 +39,6 @@ class UserPreference private constructor(
 
     fun postRegister(name: String, email: String, password: String) {
         _isLoading.value = true
-//        val client = apiService.doRegister(name, email, password)
         val client = apiService.doRegister(RegisterRequest(name, email, password) )
 
         client.enqueue(object : Callback<RegisterResponse> {

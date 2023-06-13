@@ -10,4 +10,5 @@ interface ApiService2 {
     fun doPredict(
         @Body predictRequest: PredictRequest
     ): Call<PredictResponse>
+
 }

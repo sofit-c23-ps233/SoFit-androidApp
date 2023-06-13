@@ -32,9 +32,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        setupAction()
         setupUser()
-//        setupAdapter()
         setupViewModel()
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
@@ -96,13 +94,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupUser() {
         mainViewModel.getSession().observe(this@MainActivity) {
-            token = it.token
+            token = it.name
             if (!it.isLogin) {
                 moveActivity()
             }
-//            else {
-//                setupData()
-//            }
+            else {
+                val userName = it.name
+                binding.homeActivity.tvUser.text = userName
+            }
         }
         showToast()
     }
@@ -111,11 +110,6 @@ class MainActivity : AppCompatActivity() {
         factory = ViewModelFactory.getInstance(this)
     }
 
-//    private fun showLoading() {
-//        mainViewModel.isLoading.observe(this@MainActivity) {
-//            binding.pb.visibility = if (it) View.VISIBLE else View.GONE
-//        }
-//    }
 
     private fun moveActivity() {
         startActivity(Intent(this@MainActivity, WelcomeActivity::class.java))
