@@ -1,6 +1,7 @@
 package com.capstone.sofitapp.ui.result
 
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -39,7 +40,8 @@ class ResultActivity : AppCompatActivity() {
 
         resultViewModel.doPredict(gender, height, weight)
         resultViewModel.predictResponse.observe(this) {
-            if (it != null) {
+            if (it?.prediction != null) {
+                resultViewModel.doRecommendation(it.prediction)
                 binding.apply {
                     tvHasilAngka.text = it.category
                     when (it.category) {
@@ -108,6 +110,16 @@ class ResultActivity : AppCompatActivity() {
             }
         }
 
+        resultViewModel.recommendationResponse.observe(this) {
+            if (it?.data != null) {
+                val categoryId = it.data[0]
+                binding.apply {
+                    tvDeskripsiMakanan.text = categoryId?.food
+                    tvDeskripsiOlahraga.text = categoryId?.exercise
+                }
+            }
+        }
+
         btnBack()
         btnSave()
     }
@@ -127,6 +139,27 @@ class ResultActivity : AppCompatActivity() {
 
     private fun btnSave() {
         binding.btnSimpan.setOnClickListener {
+            // Mendapatkan nilai gender, height, dan weight dari intent
+            val gender = intent.getStringExtra("gender")
+            val height = intent.getStringExtra("height")
+            val weight = intent.getStringExtra("weight")
+
+            // Mendapatkan data history yang ada dari SharedPreferences
+            val sharedPreferences = getSharedPreferences("HistoryPrefs", Context.MODE_PRIVATE)
+            val historySet = sharedPreferences.getStringSet("historyList", setOf())
+
+            // Membuat HashSet baru dengan data history yang sudah ada ditambah data baru
+            val updatedHistorySet = HashSet<String>()
+            updatedHistorySet.addAll(historySet ?: emptySet())
+            val historyData = "$gender, $height, $weight"
+            updatedHistorySet.add(historyData)
+
+            // Menyimpan data history yang diperbarui ke SharedPreferences
+            val editor = sharedPreferences.edit()
+            editor.putStringSet("historyList", updatedHistorySet)
+            editor.apply()
+
+            // Kembali ke MainActivity
             val intent = Intent(this, MainActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)

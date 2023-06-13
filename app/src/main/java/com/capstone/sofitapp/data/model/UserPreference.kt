@@ -28,6 +28,9 @@ class UserPreference private constructor(
     private val _predictResponse = MutableLiveData<PredictResponse>()
     val predictResponse: LiveData<PredictResponse> = _predictResponse
 
+    private val _recommendationResponse = MutableLiveData<RecommendationResponse>()
+    val recommendationResponse: LiveData<RecommendationResponse> = _recommendationResponse
+
     private val _profileResponse = MutableLiveData<ProfileResponse>()
     val profileResponse: LiveData<ProfileResponse> = _profileResponse
 
@@ -123,6 +126,34 @@ class UserPreference private constructor(
         })
     }
 
+    fun postRecommendation(cat_id: Int) {
+        _isLoading.value = true
+        val client = apiService.doRecommendation(cat_id.toString())
+
+        client.enqueue(object : Callback<RecommendationResponse> {
+            override fun onResponse(
+                call: Call<RecommendationResponse>,
+                response: Response<RecommendationResponse>
+            ) {
+                _isLoading.value = false
+                if (response.isSuccessful && response.body() != null) {
+                    _recommendationResponse.value = response.body()
+                } else {
+                    _toastText.value = Event(response.message().toString())
+                    Log.e(
+                        TAG,
+                        "onFailure: ${response.message()}, ${response.errorBody()?.string().toString()}"
+                    )
+                }
+            }
+
+            override fun onFailure(call: Call<RecommendationResponse>, t: Throwable) {
+                _toastText.value = Event(t.message.toString())
+                Log.e(TAG, "onFailure: ${t.message.toString()}")
+            }
+        })
+    }
+
     fun postProfile(id: String, email: String, username: String) {
         _isLoading.value = true
         val client = apiService.doUpdate(ProfileRequest(id, email, username))
@@ -150,6 +181,7 @@ class UserPreference private constructor(
             }
         })
     }
+
 
     fun getId(): Flow<String> {
         return pref.getId()

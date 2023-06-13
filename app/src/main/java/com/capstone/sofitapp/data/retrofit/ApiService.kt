@@ -1,8 +1,8 @@
 package com.capstone.sofitapp.data.retrofit
 
-//import com.capstone.sofitapp.data.response.Data
 import com.capstone.sofitapp.data.response.*
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.*
 
 interface ApiService {
@@ -16,13 +16,13 @@ interface ApiService {
 
     @POST("/auth/register")
     fun doRegister(
-    @Body registerRequest: RegisterRequest
+        @Body registerRequest: RegisterRequest
     ): Call<RegisterResponse>
 
-    @GET("/user")
-    fun getProfile(
-        @Field("id") id: String
-    ): Call<ProfileResponse>
+    @GET("/recommendation/{id}")
+    fun doRecommendation(
+        @Path("id") id: String
+    ): Call<RecommendationResponse>
 
     @PUT("/edit-profile")
     fun doUpdate(

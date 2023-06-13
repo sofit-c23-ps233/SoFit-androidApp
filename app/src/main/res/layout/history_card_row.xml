@@ -23,7 +23,7 @@
             android:fontFamily="@font/poppins_bold"
             android:text="@string/title_result"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +36,7 @@
             android:fontFamily="@font/poppins_regular"
             android:text="@string/date"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="14sp"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_title_hasil" />
 
@@ -48,7 +48,7 @@
             android:fontFamily="@font/poppins_regular"
             android:text="@string/time"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="14sp"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_tanggal_test" />
 
@@ -57,18 +57,31 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/poppins_bold"
+            android:fontFamily="@font/poppins_regular"
             android:text="@string/hasil_bmi"
             android:textColor="@color/black"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_waktu_test" />
 
-        <ImageView
-            android:id="@+id/tv_hapus"
+        <TextView
+            android:id="@+id/tv_hasil_bmi"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/hasil_bmi"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_hasil_test" />
+
+        <ImageView
+            android:id="@+id/tv_hapus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:contentDescription="@string/delete"
             android:src="@drawable/ic_delete"
             card_view:layout_constraintBottom_toBottomOf="parent"
