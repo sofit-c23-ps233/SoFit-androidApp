@@ -34,3 +34,24 @@ To run the Kotlin APK, you need:
 ## License
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software as per the terms of this license.
+
+# github our team #
+> link below
+
+[[here]](https://github.com/sofit-c23-ps233)
+
+# Design UI
+![image](app/src/main/res/drawable/welcome_activity.png)
+![image](app/src/main/res/drawable/login.png)
+![image](app/src/main/res/drawable/register.png)
+![image](app/src/main/res/drawable/home.png)
+![image](app/src/main/res/drawable/navigation.png)
+![image](app/src/main/res/drawable/survey_1.png)
+![image](app/src/main/res/drawable/survey_2.png)
+![image](app/src/main/res/drawable/survey_3.png)
+![image](app/src/main/res/drawable/hasil.png)
+![image](app/src/main/res/drawable/riwayat.png)
+![image](app/src/main/res/drawable/profile.png)
+
+# Download APK Here
+Run App by installing our pre-build apk [here](https://drive.google.com/file/d/16GHo9ur36D9EQ419WKR2a_Syj3S0fQZL/view?usp=sharing). (updated 14 June 2023)
