@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.quisioner.Quisioner1Fragment">
+    tools:context=".ui.quisioner.Quisioner1Fragment"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tvTitle_questions"
@@ -43,7 +44,8 @@
         android:text="@string/title_questions1"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/rgGender"
-        app:layout_constraintTop_toBottomOf="@+id/ivTinggi" />
+        app:layout_constraintTop_toBottomOf="@+id/ivTinggi"
+        android:textColor="@color/green"/>
 
     <TextView
         android:id="@+id/tvQuestions_gender"
@@ -57,7 +59,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuestions" />
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestions"
+        android:textColor="@color/black"/>
 
     <RadioGroup
         android:id="@+id/rgGender"
@@ -79,7 +82,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="@string/men" />
+            android:text="@string/men"
+            android:textColor="@color/black"/>
 
         <RadioButton
             android:id="@+id/rbWomen"
@@ -89,7 +93,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="@string/women" />
+            android:text="@string/women"
+            android:textColor="@color/black"/>
 
     </RadioGroup>
 
