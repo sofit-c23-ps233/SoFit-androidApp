@@ -1,171 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.auth.LoginActivity">
+    android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/ivBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:alpha="0"
-        android:contentDescription="@string/back"
-        android:src="@drawable/ic_back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036"
-        app:tint="@color/green" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.auth.LoginActivity">
 
-    <TextView
-        android:id="@+id/tv_title_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha="0"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/login"
-        android:textColor="@color/black"
-        android:textSize="27sp"
-        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
-        app:layout_constraintStart_toEndOf="@+id/ivBack"
-        app:layout_constraintTop_toTopOf="@+id/ivBack" />
-
-    <ImageView
-        android:id="@+id/ivLogin"
-        android:layout_width="242dp"
-        android:layout_height="171dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="85dp"
-        android:contentDescription="@string/imagelogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_login"
-        app:srcCompat="@drawable/image_login" />
-
-    <TextView
-        android:id="@+id/tv_title_login2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="32dp"
-        android:alpha="0"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="@string/title_login"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivLogin" />
-
-    <com.capstone.sofitapp.ui.customview.EmailEdit
-        android:id="@+id/edit_email"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="45dp"
-        android:alpha="0"
-        android:background="@drawable/bg_custom"
-        android:drawableStart="@drawable/ic_email"
-        android:drawablePadding="17dp"
-        android:fontFamily="@font/poppins_regular"
-        android:hint="@string/email"
-        android:importantForAutofill="no"
-        android:maxLength="26"
-        android:minHeight="48dp"
-        android:paddingStart="12dp"
-        android:paddingEnd="8dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_login2" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tl_password"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="32dp"
-        android:alpha="0"
-        app:boxStrokeColor="@color/light_green"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_email"
-        app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/ic_password"
-        app:startIconTint="@color/light_green">
-
-        <com.capstone.sofitapp.ui.customview.PasswordEdit
-            android:id="@+id/edit_password"
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:layout_marginStart="24dp"
+            android:alpha="0"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036"
+            app:tint="@color/green" />
+
+        <TextView
+            android:id="@+id/tv_title_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.393"
+            app:layout_constraintStart_toEndOf="@+id/ivBack"
+            app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+        <ImageView
+            android:id="@+id/ivLogin"
+            android:layout_width="242dp"
+            android:layout_height="171dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="85dp"
+            android:contentDescription="@string/imagelogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_login"
+            app:srcCompat="@drawable/image_login" />
+
+        <TextView
+            android:id="@+id/tv_title_login2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="32dp"
+            android:alpha="0"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/title_login"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.339"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLogin" />
+
+        <com.capstone.sofitapp.ui.customview.EmailEdit
+            android:id="@+id/edit_email"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="45dp"
+            android:alpha="0"
+            android:background="@drawable/bg_custom"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="17dp"
             android:fontFamily="@font/poppins_regular"
-            android:hint="@string/password"
-            android:inputType="textPassword"
+            android:hint="@string/email"
+            android:importantForAutofill="no"
+            android:maxLength="26"
+            android:minHeight="48dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
             android:textSize="16sp"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_login2" />
 
-    <com.capstone.sofitapp.ui.customview.LoginButton
-        android:id="@+id/loginButton"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:alpha="0"
-        android:fontFamily="@font/poppins_semibold"
-        android:shadowRadius="20"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tl_password" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="32dp"
+            android:alpha="0"
+            app:boxStrokeColor="@color/light_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_email"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_password"
+            app:startIconTint="@color/light_green">
 
-    <TextView
-        android:id="@+id/tvRegis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="12dp"
-        android:alpha="0"
-        android:fontFamily="@font/poppins_regular"
-        android:text="@string/intent_regis"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/tvRegis2"
-        app:layout_constraintHorizontal_bias="0.861"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+            <com.capstone.sofitapp.ui.customview.PasswordEdit
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tvRegis2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="70dp"
-        android:alpha="0"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/register"
-        android:textColor="@color/green"
-        app:layout_constraintEnd_toEndOf="@+id/loginButton"
-        app:layout_constraintTop_toTopOf="@+id/tvRegis" />
+        <com.capstone.sofitapp.ui.customview.LoginButton
+            android:id="@+id/loginButton"
+            android:layout_width="350dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="40dp"
+            android:alpha="0"
+            android:fontFamily="@font/poppins_semibold"
+            android:shadowRadius="20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_password" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        <TextView
+            android:id="@+id/tvRegis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="12dp"
+            android:alpha="0"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/intent_regis"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/tvRegis2"
+            app:layout_constraintHorizontal_bias="0.861"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvRegis2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="70dp"
+            android:alpha="0"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/register"
+            android:textColor="@color/green"
+            app:layout_constraintEnd_toEndOf="@+id/loginButton"
+            app:layout_constraintTop_toTopOf="@+id/tvRegis" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
