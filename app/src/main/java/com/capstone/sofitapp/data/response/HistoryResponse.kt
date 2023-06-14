@@ -4,27 +4,27 @@ import com.google.gson.annotations.SerializedName
 
 data class HistoryResponse(
 
-    @field:SerializedName("success")
-    val success: Boolean,
+	@field:SerializedName("data")
+	val data: List<DataHistory?>? = null,
 
-    @field:SerializedName("message")
-    val message: String,
+	@field:SerializedName("success")
+	val success: Boolean? = null,
 
-    @field:SerializedName("data")
-    val data: GetHistory
+	@field:SerializedName("message")
+	val message: String? = null
 )
 
-data class GetHistory(
+data class DataHistory(
 
-    @field:SerializedName("history")
-    val history: HistoryData
-)
+	@field:SerializedName("user_id")
+	val userId: String? = null,
 
-data class DeleteHistoryResponse(
+	@field:SerializedName("result_date")
+	val resultDate: String? = null,
 
-    @field:SerializedName("success")
-    val success: Boolean,
+	@field:SerializedName("result_id")
+	val resultId: String? = null,
 
-    @field:SerializedName("message")
-    val message: String
+	@field:SerializedName("category")
+	val category: String? = null
 )

@@ -16,9 +16,9 @@ class HistoryAdapter(private val historyDataList: MutableList<String>, private v
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvTanggalTest: TextView = itemView.findViewById(R.id.tv_tanggal_test)
-        val tvWaktuTest: TextView = itemView.findViewById(R.id.tv_waktu_test)
-        val tvHasilTest: TextView = itemView.findViewById(R.id.tv_hasil_test)
+        val tvGenderTest: TextView = itemView.findViewById(R.id.hasil_gender_test)
+        val tvTinggiTest: TextView = itemView.findViewById(R.id.hasil_tinggi_test)
+        val tvBeratest: TextView = itemView.findViewById(R.id.hasil_berat_test)
         val btnHapusHistory: ImageView = itemView.findViewById(R.id.tv_hapus)
 
     }
@@ -32,9 +32,9 @@ class HistoryAdapter(private val historyDataList: MutableList<String>, private v
         val historyData = historyDataList[position]
         val splitData = historyData.split(", ")
 
-        holder.tvTanggalTest.text = splitData[0]
-        holder.tvWaktuTest.text = splitData[1]
-        holder.tvHasilTest.text = splitData[2]
+        holder.tvGenderTest.text = splitData[0]
+        holder.tvTinggiTest.text = splitData[1]
+        holder.tvBeratest.text = splitData[2]
 
         holder.btnHapusHistory.setOnClickListener {
             listener.onHistoryItemClick(historyData)

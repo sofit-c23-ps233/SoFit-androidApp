@@ -29,41 +29,77 @@
             card_view:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_tanggal_test"
+            android:id="@+id/tv_gender_test"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="@string/date"
+            android:text="@string/gender"
             android:textColor="@color/black"
             android:textSize="14sp"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tv_title_hasil" />
 
         <TextView
-            android:id="@+id/tv_waktu_test"
+            android:id="@+id/hasil_gender_test"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="62dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="@string/time"
+            android:text="@string/gender_hasil"
             android:textColor="@color/black"
             android:textSize="14sp"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_tanggal_test" />
+            card_view:layout_constraintBottom_toBottomOf="@id/tv_gender_test"
+            card_view:layout_constraintStart_toEndOf="@id/tv_gender_test"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_gender_test" />
 
         <TextView
-            android:id="@+id/tv_hasil_test"
+            android:id="@+id/tv_tinggi_test"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_regular"
-            android:text="@string/hasil_bmi"
+            android:text="@string/height"
             android:textColor="@color/black"
             android:textSize="14sp"
-            android:textStyle="bold"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_waktu_test" />
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_gender_test" />
+
+        <TextView
+            android:id="@+id/hasil_tinggi_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/height_hasil"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            card_view:layout_constraintBottom_toBottomOf="@id/tv_tinggi_test"
+            card_view:layout_constraintStart_toStartOf="@+id/hasil_gender_test"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_tinggi_test" />
+
+        <TextView
+            android:id="@+id/tv_berat_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/weight"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_tinggi_test" />
+
+        <TextView
+            android:id="@+id/hasil_berat_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/weight_hasil"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            card_view:layout_constraintBottom_toBottomOf="@id/tv_berat_test"
+            card_view:layout_constraintStart_toStartOf="@+id/hasil_tinggi_test"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_berat_test" />
 
         <TextView
             android:id="@+id/tv_hasil_bmi"
@@ -71,12 +107,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="@string/hasil_bmi"
+            android:text="@string/bmi"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_hasil_test" />
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_berat_test" />
+
+        <TextView
+            android:id="@+id/hasil_bmi_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/bmi_hasil"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            card_view:layout_constraintBottom_toBottomOf="@id/tv_hasil_bmi"
+            card_view:layout_constraintStart_toStartOf="@+id/hasil_berat_test"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_hasil_bmi" />
 
         <ImageView
             android:id="@+id/tv_hapus"

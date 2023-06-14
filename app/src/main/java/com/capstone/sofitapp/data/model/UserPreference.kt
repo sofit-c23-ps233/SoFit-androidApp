@@ -34,6 +34,9 @@ class UserPreference private constructor(
     private val _profileResponse = MutableLiveData<ProfileResponse>()
     val profileResponse: LiveData<ProfileResponse> = _profileResponse
 
+//    private val _historyResponse = MutableLiveData<HistoryResponse>()
+//    val historyResponse: LiveData<HistoryResponse> = _historyResponse
+
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
@@ -181,6 +184,34 @@ class UserPreference private constructor(
             }
         })
     }
+
+//    fun postHistory(category: String, user_id: String) {
+//        _isLoading.value = true
+//        val client = apiService.doHistory(category, user_id)
+//
+//        client.enqueue(object : Callback<HistoryResponse> {
+//            override fun onResponse(
+//                call: Call<HistoryResponse>,
+//                response: Response<HistoryResponse>
+//            ) {
+//                _isLoading.value = false
+//                if (response.isSuccessful && response.body() != null) {
+//                    _historyResponse.value = response.body()
+//                } else {
+//                    _toastText.value = Event(response.message().toString())
+//                    Log.e(
+//                        TAG,
+//                        "onFailure: ${response.message()}, ${response.errorBody()?.string().toString()}"
+//                    )
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<HistoryResponse>, t: Throwable) {
+//                _toastText.value = Event(t.message.toString())
+//                Log.e(TAG, "onFailure: ${t.message.toString()}")
+//            }
+//        })
+//    }
 
 
     fun getId(): Flow<String> {

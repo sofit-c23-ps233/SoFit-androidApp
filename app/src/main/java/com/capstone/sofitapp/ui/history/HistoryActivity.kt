@@ -5,15 +5,19 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+//import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.capstone.sofitapp.data.model.ViewModelFactory
 import com.capstone.sofitapp.databinding.ActivityHistoryBinding
 import com.capstone.sofitapp.ui.main.MainActivity
 
 class HistoryActivity : AppCompatActivity(), HistoryAdapter.OnHistoryItemClickListener {
 
     private lateinit var binding : ActivityHistoryBinding
+    private lateinit var factory: ViewModelFactory
     private lateinit var historyAdapter: HistoryAdapter
     private lateinit var historyDataList: MutableList<String>
+//    private val historyViewModel: HistoryViewModel by viewModels { factory }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +25,16 @@ class HistoryActivity : AppCompatActivity(), HistoryAdapter.OnHistoryItemClickLi
         binding = ActivityHistoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupViewModel()
+
         historyDataList = loadHistoryData().toMutableList()
         setupRecyclerView()
 
         btnBack()
+    }
+
+    private fun setupViewModel() {
+        factory = ViewModelFactory.getInstance(this)
     }
 
     private fun setupRecyclerView() {

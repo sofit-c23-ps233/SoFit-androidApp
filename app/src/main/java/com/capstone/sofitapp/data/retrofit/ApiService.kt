@@ -2,7 +2,6 @@ package com.capstone.sofitapp.data.retrofit
 
 import com.capstone.sofitapp.data.response.*
 import retrofit2.Call
-import retrofit2.Response
 import retrofit2.http.*
 
 interface ApiService {
@@ -29,9 +28,15 @@ interface ApiService {
         @Body profileRequest: ProfileRequest
     ): Call<ProfileResponse>
 
-    @DELETE("/delete-user/{id_user}")
-    fun deleteProfile(
-        @Path("id_user") id_user: String
-    ): Call<DeleteProfile>
+//    @GET("/result/{id}")
+//    fun doHistory(
+//        @Path("id") id: String,
+//        @Query("category") category: String
+//    ): Call<HistoryResponse>
+//
+//    @DELETE("/delete-user/{id_user}")
+//    fun deleteProfile(
+//        @Path("id_user") id_user: String
+//    ): Call<DeleteProfile>
 
 }

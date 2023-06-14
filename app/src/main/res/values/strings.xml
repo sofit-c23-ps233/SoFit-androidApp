@@ -58,9 +58,14 @@
 
     <!--History-->
     <string name="title_result">Hasil</string>
-    <string name="date">Tanggal</string>
-    <string name="time">Waktu</string>
-    <string name="hasil_bmi">BMI</string>
+    <string name="gender">Gender</string>
+    <string name="gender_hasil">Laki - laki </string>
+    <string name="height">Tinggi Badan</string>
+    <string name="height_hasil">170 cm</string>
+    <string name="weight">Berat Badan</string>
+    <string name="weight_hasil">60 kg</string>
+    <string name="bmi">BMI</string>
+    <string name="bmi_hasil">Ideal</string>
     <string name="delete">Hapus</string>
 
     <!--Profile-->
@@ -89,8 +94,8 @@
 
     <!--Result-->
     <string name="rekomendasi">Rekomendasi</string>
-    <string name="rekomendasi_olahraga">Olahraga Lari</string>
-    <string name="rekomendasi_makanan">Makan Buah - Buahan</string>
+    <string name="rekomendasi_olahraga">Olahraga</string>
+    <string name="rekomendasi_makanan">Makanan</string>
     <string name="deskripsi_olahraga">Olahraga ini dapat membantu mengurangi lemak di tubuh, dan mampu membuat  badan sehat.</string>
     <string name="deskripsi_makanan">Memakan buah-buahan mampu meningkatkan kesehatan tubuh, merupakan sumber vitamin, dan Mencegah penyakit tertentu</string>
     <string name="red">Merah</string>
