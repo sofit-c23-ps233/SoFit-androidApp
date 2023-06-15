@@ -40,7 +40,9 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 [[here]](https://github.com/sofit-c23-ps233)
 
 # Design UI
-!<img src=" https://imgur.com/LoKZ8xW " width="300"> !<img src=" https://imgur.com/sWHkeP2 " width="300"> ![image](app/src/main/res/drawable/login.png) ![image](app/src/main/res/drawable/register.png) ![image](app/src/main/res/drawable/home.png) ![image](app/src/main/res/drawable/navigation.png) ![image](app/src/main/res/drawable/survey_1.png) ![image](app/src/main/res/drawable/survey_2.png) ![image](app/src/main/res/drawable/survey_3.png) ![image](app/src/main/res/drawable/hasil.png) ![image](app/src/main/res/drawable/riwayat.png) ![image](app/src/main/res/drawable/profile.png)
+![Splash Screen](https://github.com/sofit-c23-ps233/SoFit-androidApp/assets/107060682/c16c0e4a-8080-451e-9c4d-a2a0a0db83c0)
+![Welcome Activity](https://github.com/sofit-c23-ps233/SoFit-androidApp/assets/107060682/380ac3f0-668a-468a-a356-49859fa1ac81)
+ ![image](app/src/main/res/drawable/login.png) ![image](app/src/main/res/drawable/register.png) ![image](app/src/main/res/drawable/home.png) ![image](app/src/main/res/drawable/navigation.png) ![image](app/src/main/res/drawable/survey_1.png) ![image](app/src/main/res/drawable/survey_2.png) ![image](app/src/main/res/drawable/survey_3.png) ![image](app/src/main/res/drawable/hasil.png) ![image](app/src/main/res/drawable/riwayat.png) ![image](app/src/main/res/drawable/profile.png)
 
 # Download APK Here
 Run App by installing our pre-build apk [here](https://website-dot-sofit-cloud.et.r.appspot.com/). (updated 14 June 2023)
