@@ -9,9 +9,9 @@ Application for the health of your body and provide recommendations based on you
 
 To run the Kotlin APK, you need:
 
-- An Android device or emulator running Android OS version X.X or higher.
-- Kotlin SDK and build tools (version X.X.X) installed on your development environment.
-- Android Studio (version X.X or higher) or another compatible IDE.
+- An Android device or emulator running Android OS.
+- Kotlin SDK and build tools installed on your development environment.
+- Android Studio or another compatible IDE.
 
 ## Setup and Installation
 
@@ -54,4 +54,4 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 ![image](app/src/main/res/drawable/profile.png)
 
 # Download APK Here
-Run App by installing our pre-build apk [here](https://drive.google.com/file/d/16GHo9ur36D9EQ419WKR2a_Syj3S0fQZL/view?usp=sharing). (updated 14 June 2023)
+Run App by installing our pre-build apk [here](https://website-dot-sofit-cloud.et.r.appspot.com/). (updated 14 June 2023)
