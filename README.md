@@ -40,6 +40,7 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 [[here]](https://github.com/sofit-c23-ps233)
 
 # Design UI
+
 <table>
    <tr>
       <td><img src="app/src/main/res/drawable/splash_screen.png" style="height: 300px;"></td>
@@ -64,4 +65,4 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 </table>
 
 # Download APK Here
-Run App by installing our pre-build apk [here](https://website-dot-sofit-cloud.et.r.appspot.com/). (updated 14 June 2023)
+Run App by installing our pre-build apk [here](https://website-dot-sofit-cloud.et.r.appspot.com/). (updated 15 June 2023)
