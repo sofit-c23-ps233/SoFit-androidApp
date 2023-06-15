@@ -41,8 +41,7 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 [[here]](https://github.com/sofit-c23-ps233)
 
 # Design UI
-![image](app/src/main/res/drawable/welcome_activity.png)
-![image](app/src/main/res/drawable/login.png)
+![image](app/src/main/res/drawable/welcome_activity.png) ![image](app/src/main/res/drawable/login.png)
 ![image](app/src/main/res/drawable/register.png)
 ![image](app/src/main/res/drawable/home.png)
 ![image](app/src/main/res/drawable/navigation.png)
