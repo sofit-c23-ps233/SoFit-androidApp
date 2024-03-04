@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.quisioner.Quisioner3Fragment">
+    tools:context=".ui.quisioner.Quisioner3Fragment"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tvTitle_questions"
@@ -42,7 +43,8 @@
         android:text="@string/title_questions3"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_kg"
-        app:layout_constraintTop_toBottomOf="@+id/ivTinggi" />
+        app:layout_constraintTop_toBottomOf="@+id/ivTinggi"
+        android:textColor="@color/green"/>
 
     <TextView
         android:id="@+id/tvQuestions_gender"
@@ -56,7 +58,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuestions" />
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestions"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/edit_berat"
@@ -66,10 +69,12 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_regular"
         android:hint="@string/berat_hint"
+        android:textColorHint="@color/grey"
         android:inputType="number"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvQuestions_gender" />
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestions_gender"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tv_kg"

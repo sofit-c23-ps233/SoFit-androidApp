@@ -1,343 +1,359 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/resultLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.result.ResultActivity">
+    android:background="@color/white">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarResult"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/resultLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        tools:context=".ui.result.ResultActivity"
+        android:background="@color/white">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/ivBack"
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/back"
-                android:src="@drawable/ic_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/green" />
+                android:background="@color/white">
 
-            <TextView
-                android:id="@+id/tvResult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/title_result"
-                android:textColor="@color/green"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/green" />
 
-        </androidx.appcompat.widget.Toolbar>
+                <TextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/title_result"
+                    android:textColor="@color/green"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+            </androidx.appcompat.widget.Toolbar>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_hasil_bmi"
-        style="@style/Margin"
-        android:layout_width="315dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="124dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
-        app:contentPadding="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/cv_rekomendasi_olahraga"
-        app:layout_constraintStart_toStartOf="@+id/cv_rekomendasi_olahraga"
-        app:layout_constraintTop_toTopOf="@+id/appBarResult">
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_hasil_bmi"
+            android:backgroundTint="@color/white"
+            android:layout_width="315dp"
+            android:layout_height="121dp"
+            android:layout_marginTop="124dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:contentPadding="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/cv_rekomendasi_olahraga"
+            app:layout_constraintStart_toStartOf="@+id/cv_rekomendasi_olahraga"
+            app:layout_constraintTop_toTopOf="@+id/appBarResult">
 
-            <TextView
-                android:id="@+id/tvHasil_angka"
-                android:layout_width="149dp"
-                android:layout_height="17dp"
-                android:layout_marginStart="67dp"
-                android:layout_marginEnd="83dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/poppins_regular"
-                android:gravity="center"
-                android:text="@string/hasil_bmi_angka"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.258"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp"
+                android:background="@color/white">
 
-            <ImageView
-                android:id="@+id/ivMerah"
-                android:layout_width="33dp"
-                android:layout_height="46dp"
-                android:layout_marginStart="44dp"
-                android:contentDescription="@string/red"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter_merah1" />
+                <TextView
+                    android:id="@+id/tvHasil_angka"
+                    android:layout_width="149dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="67dp"
+                    android:layout_marginEnd="83dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:text="@string/hasil_bmi_angka"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.258"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/ivKuning"
-                android:layout_width="33dp"
-                android:layout_height="46dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="10dp"
-                android:contentDescription="@string/orange"
-                app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
-                app:layout_constraintStart_toEndOf="@+id/ivMerah"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter_kuning" />
+                <ImageView
+                    android:id="@+id/ivMerah"
+                    android:layout_width="33dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="44dp"
+                    android:contentDescription="@string/red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/parameter_merah1" />
 
-            <ImageView
-                android:id="@+id/ivHijau"
-                android:layout_width="33dp"
-                android:layout_height="46dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="10dp"
-                android:contentDescription="@string/yellow"
-                app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
-                app:layout_constraintStart_toEndOf="@+id/ivKuning"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter_hijau" />
+                <ImageView
+                    android:id="@+id/ivKuning"
+                    android:layout_width="33dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/orange"
+                    app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
+                    app:layout_constraintStart_toEndOf="@+id/ivMerah"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/parameter_kuning" />
 
-            <ImageView
-                android:id="@+id/ivKuning2"
-                android:layout_width="33dp"
-                android:layout_height="46dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="10dp"
-                android:contentDescription="@string/dark_green"
-                app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
-                app:layout_constraintStart_toEndOf="@+id/ivHijau"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter_kuning" />
+                <ImageView
+                    android:id="@+id/ivHijau"
+                    android:layout_width="33dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/yellow"
+                    app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
+                    app:layout_constraintStart_toEndOf="@+id/ivKuning"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/parameter_hijau" />
 
-            <ImageView
-                android:id="@+id/ivOrange"
-                android:layout_width="33dp"
-                android:layout_height="46dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="10dp"
-                android:contentDescription="@string/light_green"
-                app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
-                app:layout_constraintStart_toEndOf="@+id/ivKuning2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter_orange" />
+                <ImageView
+                    android:id="@+id/ivKuning2"
+                    android:layout_width="33dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/dark_green"
+                    app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
+                    app:layout_constraintStart_toEndOf="@+id/ivHijau"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/parameter_kuning" />
 
-            <ImageView
-                android:id="@+id/ivMerah2"
-                android:layout_width="33dp"
-                android:layout_height="46dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="10dp"
-                android:contentDescription="@string/light_green"
-                app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
-                app:layout_constraintStart_toEndOf="@+id/ivOrange"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/parameter_merah2" />
+                <ImageView
+                    android:id="@+id/ivOrange"
+                    android:layout_width="33dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/light_green"
+                    app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
+                    app:layout_constraintStart_toEndOf="@+id/ivKuning2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/parameter_orange" />
 
-            <ImageView
-                android:id="@+id/ivArrow"
-                android:layout_width="30dp"
-                android:layout_height="17dp"
-                android:layout_marginBottom="8dp"
-                android:contentDescription="@string/arrow"
-                app:layout_constraintEnd_toEndOf="@+id/ivHijau"
-                app:layout_constraintStart_toStartOf="@+id/ivHijau"
-                app:layout_constraintTop_toTopOf="@+id/ivHijau"
-                app:layout_constraintBottom_toBottomOf="@id/ivHijau"
-                app:srcCompat="@drawable/panah" />
+                <ImageView
+                    android:id="@+id/ivMerah2"
+                    android:layout_width="33dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:contentDescription="@string/light_green"
+                    app:layout_constraintBottom_toTopOf="@+id/tvHasil_keterangan"
+                    app:layout_constraintStart_toEndOf="@+id/ivOrange"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/parameter_merah2" />
 
-            <TextView
-                android:id="@+id/tvHasil_keterangan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="52dp"
-                android:layout_marginEnd="118dp"
-                android:layout_marginBottom="8dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/hasil_bmi_keterangan"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvHasil_angka" />
+                <ImageView
+                    android:id="@+id/ivArrow"
+                    android:layout_width="30dp"
+                    android:layout_height="17dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/arrow"
+                    app:layout_constraintEnd_toEndOf="@+id/ivHijau"
+                    app:layout_constraintStart_toStartOf="@+id/ivHijau"
+                    app:layout_constraintTop_toTopOf="@+id/ivHijau"
+                    app:layout_constraintBottom_toBottomOf="@id/ivHijau"
+                    app:srcCompat="@drawable/panah" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tvHasil_keterangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginEnd="118dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/hasil_bmi_keterangan"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHasil_angka" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/tvRekomendasi"
-        style="@style/Margin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_bold"
-        android:gravity="start"
-        android:text="@string/rekomendasi"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/cv_rekomendasi_olahraga"
-        app:layout_constraintTop_toBottomOf="@+id/cv_hasil_bmi" />
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_rekomendasi_olahraga"
-        style="@style/Margin"
-        android:layout_width="383dp"
-        android:layout_height="148dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
-        app:contentPadding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRekomendasi">
+        <TextView
+            android:id="@+id/tvRekomendasi"
+            style="@style/Margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="start"
+            android:text="@string/rekomendasi"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/cv_rekomendasi_olahraga"
+            app:layout_constraintTop_toBottomOf="@+id/cv_hasil_bmi" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-            tools:layout_editor_absoluteX="32dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_rekomendasi_olahraga"
+            style="@style/Margin"
+            android:layout_width="383dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:contentPadding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRekomendasi">
 
-            <ImageView
-                android:id="@+id/iv_olahraga"
-                android:layout_width="94dp"
-                android:layout_height="84dp"
-                android:contentDescription="@string/start_test"
-                android:src="@drawable/ic_run"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:tint="@color/green" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+                tools:layout_editor_absoluteX="32dp"
+                android:background="@color/white">
 
-            <TextView
-                android:id="@+id/tvRekomendasi_olahraga"
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/rekomendasi_olahraga"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/iv_olahraga"
-                app:layout_constraintEnd_toEndOf="@+id/iv_olahraga"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/iv_olahraga"
+                    android:layout_width="94dp"
+                    android:layout_height="84dp"
+                    android:contentDescription="@string/start_test"
+                    android:src="@drawable/ic_run"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:tint="@color/green" />
 
-            <TextView
-                android:id="@+id/tv_deskripsi_olahraga"
-                android:layout_width="259dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/deskripsi_olahraga"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/iv_olahraga"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tvRekomendasi_olahraga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/rekomendasi_olahraga"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/iv_olahraga"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_olahraga"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_deskripsi_olahraga"
+                    android:layout_width="259dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/deskripsi_olahraga"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/iv_olahraga"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_rekomendasi_makanan"
-        style="@style/Margin"
-        android:layout_width="383dp"
-        android:layout_height="148dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="44dp"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
-        app:contentPadding="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_rekomendasi_olahraga">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-            tools:layout_editor_absoluteX="32dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_rekomendasi_makanan"
+            style="@style/Margin"
+            android:layout_width="383dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="44dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:contentPadding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_rekomendasi_olahraga">
 
-            <ImageView
-                android:id="@+id/iv_makanan"
-                android:layout_width="94dp"
-                android:layout_height="84dp"
-                android:contentDescription="@string/start_test"
-                android:src="@drawable/ic_apple"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:tint="@color/green" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+                tools:layout_editor_absoluteX="32dp"
+                android:background="@color/white">
 
-            <TextView
-                android:id="@+id/tvRekomendasi_makanan"
-                android:layout_width="wrap_content"
-                android:layout_height="24dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/rekomendasi_makanan"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/iv_makanan"
-                app:layout_constraintEnd_toEndOf="@+id/iv_makanan"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/iv_makanan"
+                    android:layout_width="94dp"
+                    android:layout_height="84dp"
+                    android:contentDescription="@string/start_test"
+                    android:src="@drawable/ic_apple"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:tint="@color/green" />
 
-            <TextView
-                android:id="@+id/tv_deskripsi_makanan"
-                android:layout_width="259dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/deskripsi_makanan"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/iv_makanan"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tvRekomendasi_makanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/rekomendasi_makanan"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/iv_makanan"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_makanan"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_deskripsi_makanan"
+                    android:layout_width="259dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/deskripsi_makanan"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/iv_makanan"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/btnSimpan"
-        style="@style/Margin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:backgroundTint="@color/green"
-        android:text="@string/save"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_rekomendasi_makanan" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnSimpan"
+            style="@style/Margin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:backgroundTint="@color/green"
+            android:text="@string/save"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_rekomendasi_makanan" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

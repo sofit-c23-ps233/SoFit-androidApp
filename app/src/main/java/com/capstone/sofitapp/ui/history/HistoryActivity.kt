@@ -39,8 +39,8 @@ class HistoryActivity : AppCompatActivity(), HistoryAdapter.OnHistoryItemClickLi
 
     private fun setupRecyclerView() {
         historyAdapter = HistoryAdapter(historyDataList, this)
-        binding.rvHistory.adapter = historyAdapter
-        binding.rvHistory.layoutManager = LinearLayoutManager(this)
+        binding.rvListHistory.adapter = historyAdapter
+        binding.rvListHistory.layoutManager = LinearLayoutManager(this)
     }
 
     private fun loadHistoryData(): List<String> {
