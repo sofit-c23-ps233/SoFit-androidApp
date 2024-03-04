@@ -20,6 +20,7 @@ import com.capstone.sofitapp.ui.WelcomeActivity
 
 
 class LoginActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityLoginBinding
     private lateinit var factory: ViewModelFactory
     private val loginViewModel: LoginViewModel by viewModels { factory }

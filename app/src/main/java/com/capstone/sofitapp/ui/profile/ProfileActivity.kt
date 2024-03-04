@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import com.capstone.sofitapp.data.model.ViewModelFactory
 import com.capstone.sofitapp.databinding.ActivityProfileBinding
+import com.capstone.sofitapp.ui.WelcomeActivity
 import com.capstone.sofitapp.ui.main.MainActivity
 class ProfileActivity : AppCompatActivity() {
 
@@ -25,6 +26,11 @@ class ProfileActivity : AppCompatActivity() {
         binding.btnSave.setOnClickListener{
             // saat login data id nya disimpen di share preference, di user pref nya harus ada fungsi buat ngambil id nya di shared pref
             profileViewModel.doUpdate(binding.editEmail.text.toString(), binding.editUser.text.toString())
+        }
+
+        binding.btnDelete.setOnClickListener{
+            startActivity(Intent(this@ProfileActivity, WelcomeActivity::class.java))
+            Toast.makeText(applicationContext, "Profile berhasil dihapus", Toast.LENGTH_SHORT).show()
         }
 
         btnBack()

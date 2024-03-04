@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         binding.navLogout.setOnClickListener {
             startActivity(Intent(this, WelcomeActivity::class.java))
             mainViewModel.logout()
+            Toast.makeText(applicationContext, "Logout Berhasil", Toast.LENGTH_SHORT).show()
         }
 
         // Navigation Drawer Back Button
