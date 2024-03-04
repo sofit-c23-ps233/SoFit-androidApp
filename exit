@@ -1,0 +1,193 @@
+[33mcommit 98b1735215a453dacbb7ace62f450d4253dab453[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 0952d3f 4d8d997
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Tue Jun 13 12:39:08 2023 +0700
+
+    Merge remote-tracking branch 'origin/main'
+    
+    # Conflicts:
+    #       app/src/main/java/com/capstone/sofitapp/ui/main/MainActivity.kt
+    #       app/src/main/java/com/capstone/sofitapp/ui/profile/ProfileActivity.kt
+    #       app/src/main/res/layout/activity_home.xml
+
+[33mcommit 0952d3f74f29ebc25820d3fee4e88051375e7571[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Tue Jun 13 12:38:36 2023 +0700
+
+    edit profile sama menampilkan nama di halaman utama beres
+
+[33mcommit 4d8d99758775f955fc59702d007717d28d52cc78[m
+Author: Fikri Ridwan <kakafikri56@gmail.com>
+Date:   Mon Jun 12 19:07:42 2023 +0700
+
+    Menambahkan scroll view, update edit profile, edit greeting text di home
+
+[33mcommit e7e7bdaeeb9ea9ae363746fa503a167db05b599e[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Fri Jun 9 10:08:15 2023 +0700
+
+    Implementasi Main feature almost done, tinggal menyimpan hasilnya
+
+[33mcommit df682084e7996449c9a8f91eb9e75fd3fdb3668c[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon Jun 5 14:27:44 2023 +0700
+
+    API Login & Register Beres
+
+[33mcommit 9ba5f2a7ce20e616b5f95d86ec053e1af3166dea[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Thu Jun 1 14:30:07 2023 +0700
+
+    semua tampilan sudah beres tinggal implementasi API
+
+[33mcommit 851ca2a0556b7db09d06dc821e3ada662b9b106b[m
+Merge: 14ff378 af200ab
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Wed May 31 22:28:34 2023 +0700
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit 14ff3781c6e85c1f21f54bcb0ffd3aaaca2fae69[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Wed May 31 22:26:16 2023 +0700
+
+    menambahkan fragment dan result
+
+[33mcommit af200ab95f1e64cf027292f909580d9616b46b3a[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Tue May 30 15:47:26 2023 +0700
+
+    Update README.md
+
+[33mcommit f92b96f98bd09770c88ed2d123ce339fef5fad12[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 29 20:28:46 2023 +0700
+
+    menambahkan history activity
+
+[33mcommit 03d2c1439a7fdf5edc8e68f0345378f4b45091c6[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 29 15:43:54 2023 +0700
+
+    menambahkan navigation drawer dan edit xml login register
+
+[33mcommit 49d8c6c1f05695abb73d8a6423e4d7ec54fa428d[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Sat May 27 22:33:28 2023 +0700
+
+    home activity beres
+
+[33mcommit 3d551128f881c7c60c992396e30d65f54be31b3c[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Sat May 27 17:03:25 2023 +0700
+
+    menambahkan animasi pada welcome, register dan login
+
+[33mcommit 9a167a4c5442d8445d959c80cd2a2e99c372df8e[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Fri May 26 01:27:02 2023 +0700
+
+    menerapkan back stack
+
+[33mcommit c5290d48fe8e730320fd7e3ac45739cc528da25c[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Fri May 26 01:26:18 2023 +0700
+
+    menerapkan back stack
+
+[33mcommit 249584ea5ce7f871a7339ffddeef340ec578ecf2[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Fri May 26 01:04:39 2023 +0700
+
+    welcome activity beres
+
+[33mcommit 13609c7f67a624f2dc2e95cb3df534e4ec9d92dd[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Thu May 25 17:27:20 2023 +0700
+
+    icon sofit
+
+[33mcommit c4c641990b76cf3fd35875df798db8fe0939fa86[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Thu May 25 17:26:43 2023 +0700
+
+    xml register beres
+
+[33mcommit a3d3acb4697ffbe20d9a34c7eace354acf98ceb3[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Wed May 24 09:15:56 2023 +0700
+
+    menambahkan icon
+
+[33mcommit 00f9e69020cc3abebcd50723d6b9155a9d4c3af4[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 22:37:28 2023 +0700
+
+    menambahkan activity register
+
+[33mcommit fcf38f8757b34c66e72eb3d79e2fee6da9ed83fb[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 21:15:35 2023 +0700
+
+    nambahain splash screen
+
+[33mcommit 0092834f6c00e653118cb2a6e5287b73a974e44b[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 12:22:05 2023 +0700
+
+    nyicil dikit2
+
+[33mcommit ea2cdb5fa6a2735201b061ebf8eb0614ec203789[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 11:13:05 2023 +0700
+
+    menambahkan splash screen
+
+[33mcommit e54d59892365b5d5142c532790a0f6506b18811b[m
+Merge: a37013a 3643ad9
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 11:07:59 2023 +0700
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit a37013a054198e25330f1486a782d5e9e8b846dd[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 11:07:12 2023 +0700
+
+    hapus strings
+
+[33mcommit 3643ad942aaa6202f349dc0aa2f02dd8b243a161[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 11:06:07 2023 +0700
+
+    Update README.md
+
+[33mcommit 41b524854ef298995128cfe07dd8fb82978318ce[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 11:02:47 2023 +0700
+
+    menambahkan project capstone ke repo
+
+[33mcommit 09b23fbe02b9eecc3acdbe548b1761114594e695[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 10:41:44 2023 +0700
+
+    Create README.md
+
+[33mcommit 2c61a1ac662416af23dc05b09ea3a88c0a9da317[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 10:25:41 2023 +0700
+
+    delete
+
+[33mcommit cc9a35b2ca39cca38343035345986ce91de83116[m
+Author: Husni Sabar <husnisabar592@gmail.com>
+Date:   Mon May 22 10:23:26 2023 +0700
+
+    test
+
+[33mcommit ee4bdd1721ed172d8c032a27cfa5426d832c719a[m
+Author: iamtryer <104316833+iamtryer@users.noreply.github.com>
+Date:   Tue May 16 10:29:38 2023 +0700
+
+    Initial commit
